@@ -1,4 +1,3 @@
-```
 # Paulo C. M. Lyra Jr. — Personal Webpage
 
 This repository contains the source code and assets for **Paulo C. M. Lyra Jr.**’s professional and scientific personal website. It showcases Dr. Lyra’s background, CV, publications, projects, and contact information in a clean, modern, and responsive design.
