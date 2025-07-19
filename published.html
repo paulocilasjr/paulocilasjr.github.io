@@ -7,22 +7,68 @@
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #313944; color: #ffffff; }
-        .jb, h2 { text-align: center; }
-        .authors { text-align: justify; margin-left: 200px; margin-right: 200px; }
-        b { color: #51d0ed; }
-        .btn-outline-info { color: #51d0ed; border-color: #51d0ed; }
-        .btn-outline-info:hover { background-color: #51d0ed; color: #313944; }
-        .navbar-brand img { height: 80px; width: 80px; margin-right: 1rem; }
+        :root {
+            --bg: #f5f6fa;
+            --text: #1f2a44;
+            --accent: #3fa9f5;
+            --accent2: #f5a93f;
+            --light: #ffffff;
+            --muted: #7a7a7a;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+        }
+        nav {
+            background: var(--light);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .navbar-brand, .nav-link {
+            color: var(--text) !important;
+            font-weight: 500;
+        }
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+        .jumbotron {
+            background: var(--light);
+            color: var(--text);
+            border-radius: 8px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-left: 4px solid var(--accent2);
+            padding-left: 0.5rem;
+            margin: 3rem 0 1.5rem;
+        }
+        .authors p {
+            margin-bottom: 0.5rem;
+        }
+        .btn-primary, .btn-secondary {
+            color: var(--light);
+        }
+        .btn-primary {
+            background: var(--accent);
+            border: none;
+            margin-bottom: 1rem;
+        }
+        .btn-secondary {
+            background: var(--accent2);
+            border: none;
+        }
+        .btn-primary:hover, .btn-secondary:hover {
+            opacity: 0.9;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="figures/hiclipart.com.png" alt="Logo">
-        <span>Paulo C. M. Lyra Jr.</span>
+        <img src="figures/hiclipart.com.png" alt="Logo" width="50" height="50">
+        <span style="margin-left:0.5rem;">Paulo C. M. Lyra Jr.</span>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
         <span class="navbar-toggler-icon"></span>
@@ -31,112 +77,100 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://scholar.google.com.co/citations?user=EnoaXSEAAAAJ&hl=en" target="_blank">Scholar</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div class="container-fluid text-white" style="margin-top:120px;">
-    <div class="jumbotron bg-light text-dark py-4">
-      <h2 class="jb">SCOPUS and WEB OF SCIENCE Metrics</h2>
+  <div class="container-fluid" style="padding-top:120px; padding-bottom:4rem;">
+    <div class="jumbotron py-4 text-center mx-auto" style="max-width:800px;">
+      <h2 class="mb-3">Publications</h2>
       <p>Total articles: <strong>14</strong></p>
       <p>Last update: <strong>June 25, 2025</strong></p>
     </div>
 
-    <section>
-      <h2>Articles Published</h2>
+    <section class="container">
+      <h3 class="section-title">Articles Published</h3>
 
-      <div class="authors mt-4">
-        <p><b>1.</b> <b>Tessarollo NG, Guimarães IDS, Dos Santos DZ, Henriques TB, Lyra-Jr PCM, Carlos de Souza J, Pimenta TM, Martins BDS, Butzene SMS, Padilha JMS, Maciel LLF, Almeida JCA, Silva IV, Rangel LBA</b>. Phosphodiesterase 7: a potential novel therapeutic target in ovarian cancer. <em>Front Pharmacol.</em> 2025 Jun 4;16:1566330. DOI: 10.3389/fphar.2025.1566330.</p>
-        <div class="jb mb-5">
-          <a href="https://doi.org/10.3389/fphar.2025.1566330" target="_blank" class="btn btn-outline-info">Journal's page</a>
-        </div>
+      <div class="authors">
+        <p><strong>1.</strong> Tessarollo NG, Guimarães IDS, Dos Santos DZ, Henriques TB, Lyra-Jr PCM, Carlos de Souza J, Pimenta TM, Martins BDS, Butzene SMS, Padilha JMS, Maciel LLF, Almeida JCA, Silva IV, Rangel LBA. Phosphodiesterase 7: a potential novel therapeutic target in ovarian cancer. <em>Front Pharmacol.</em> 2025 Jun 4;16:1566330. DOI: 10.3389/fphar.2025.1566330.</p>
+        <a href="https://doi.org/10.3389/fphar.2025.1566330" class="btn btn-primary" target="_blank">Journal's page</a>
       </div>
 
-      <div class="authors mt-4">
-        <p><b>2.</b> <b>Huang H, Hu C, Na J, Hart SN, Gnanaolivu RD, Abozaid M, Rao T, Tecleab YA; CARRIERS Consortium; Pesaran T, Lyra PCM, Karam R, Yadav S, Nathanson KL, Domchek SM, de la Hoya M, Robson M, Mehine M, Bandlamudi C, Mandelker D, Monteiro ANA, Boddicker N, Chen W, Richardson ME, Couch FJ</b>. Functional evaluation and clinical classification of BRCA2 variants. <em>Nature.</em> 2025 Jan. DOI: 10.1038/s41586-024-08388-8.</p>
-        <div class="jb mb-5">
-          <a href="https://doi.org/10.1038/s41586-024-08388-8" target="_blank" class="btn btn-outline-info">Journal's page</a>
-        </div>
+      <div class="authors">
+        <p><strong>2.</strong> Huang H, Hu C, Na J, Hart SN, Gnanaolivu RD, Abozaid M, Rao T, Tecleab YA; CARRIERS Consortium; Pesaran T, Lyra PCM, Karam R, Yadav S, Nathanson KL, Domchek SM, de la Hoya M, Robson M, Mehine M, Bandlamudi C, Mandelker D, Monteiro ANA, Boddicker N, Chen W, Richardson ME, Couch FJ. Functional evaluation and clinical classification of BRCA2 variants. <em>Nature.</em> 2025 Jan. DOI: 10.1038/s41586-024-08388-8.</p>
+        <a href="https://doi.org/10.1038/s41586-024-08388-8" class="btn btn-primary" target="_blank">Journal's page</a>
       </div>
 
-      <div class="authors mt-4">
-        <p><b>3.</b> Nepomuceno TC, Lyra PCM, Zhu J, Yi F, Martin RH, Lupu D, Peterson L, Peres LC, Berry A, Iversen ES, Couch FJ, Mo Q, Monteiro ANA. Assessment of BRCA1 and BRCA2 Germline Variant Data from Patients With Breast Cancer in a Real-World Data Registry. <em>JCO Clin Cancer Inform.</em> 2024 May. DOI: 10.1200/CCI.23.00251.</p>
-        <div class="jb mb-5">
-          <a href="https://doi.org/10.1200/CCI.23.00251" target="_blank" class="btn btn-outline-info">Journal's page</a>
-        </div>
+      <div class="authors">
+        <p><strong>3.</strong> Nepomuceno TC, Lyra PCM, Zhu J, Yi F, Martin RH, Lupu D, Peterson L, Peres LC, Berry A, Iversen ES, Couch FJ, Mo Q, Monteiro ANA. Assessment of BRCA1 and BRCA2 Germline Variant Data from Patients With Breast Cancer in a Real-World Data Registry. <em>JCO Clin Cancer Inform.</em> 2024 May. DOI: 10.1200/CCI.23.00251.</p>
+        <a href="https://doi.org/10.1200/CCI.23.00251" class="btn btn-primary" target="_blank">Journal's page</a>
       </div>
 
-      <div class="authors mt-4">
-        <p><b>4.</b> Hu C, Huang H, Na J, Lumby C, Abozaid M, Holdren MA, Rao TJ, Karam R, Pesaran T, Weyandt JD, Csuy CM, Seelaus CA, Young CC, Fulk K, Heidari Z, Morais Lyra PC Jr, Couch RE, Persons B, Polley EC, Gnanaolivu RD, Boddicker NJ, Monteiro ANA, Yadav S, Domchek SM, Richardson ME, Couch FJ. Functional analysis and clinical classification of 462 germline BRCA2 missense variants affecting the DNA binding domain. <em>Am J Hum Genet.</em> 2024 Mar. DOI: 10.1016/j.ajhg.2024.02.002.</p>
-        <div class="jb mb-5">
-          <a href="https://doi.org/10.1016/j.ajhg.2024.02.002" target="_blank" class="btn btn-outline-info">Journal's page</a>
-        </div>
+      <div class="authors">
+        <p><strong>4.</strong> Hu C, Huang H, Na J, Lumby C, Abozaid M, Holdren MA, Rao TJ, Karam R, Pesaran T, Weyandt JD, Csuy CM, Seelaus CA, Young CC, Fulk K, Heidari Z, Morais Lyra PC Jr, Couch RE, Persons B, Polley EC, Gnanaolivu RD, Boddicker NJ, Monteiro ANA, Yadav S, Domchek SM, Richardson ME, Couch FJ. Functional analysis and clinical classification of 462 germline BRCA2 missense variants affecting the DNA binding domain. <em>Am J Hum Genet.</em> 2024 Mar. DOI: 10.1016/j.ajhg.2024.02.002.</p>
+        <a href="https://doi.org/10.1016/j.ajhg.2024.02.002" class="btn btn-primary" target="_blank">Journal's page</a>
       </div>
 
-      <div class="authors mt-4">
-        <p><b>5.</b> Huang H, Hu C, Na J, Hart SN, Gnanaolivu RD, Abozaid M, Rao T, Tecleab YA, Pesaran T, Lyra PCM, Karam R, Yadav S, Domchek SM, de la Hoya M, Robson M, Mehine M, Bandlamudi C, Mandelker D, Monteiro ANA, Boddicker N, Chen W, Richardson ME, Couch FJ. Saturation genome editing-based functional evaluation and clinical classification of BRCA2 single nucleotide variants. <em>bioRxiv [Preprint].</em> 2023 Dec. DOI: 10.1101/2023.12.14.571597.</p>
-        <div class="jb mb-5">
-          <a href="https://doi.org/10.1101/2023.12.14.571597" target="_blank" class="btn btn-outline-info">Preprint page</a>
-        </div>
+      <div class="authors">
+        <p><strong>5.</strong> Huang H, Hu C, Na J, Hart SN, Gnanaolivu RD, Abozaid M, Rao T, Tecleab YA, Pesaran T, Lyra PCM, Karam R, Yadav S, Domchek SM, de la Hoya M, Robson M, Mehine M, Bandlamudi C, Mandelker D, Monteiro ANA, Boddicker N, Chen W, Richardson ME, Couch FJ. Saturation genome editing-based functional evaluation and clinical classification of BRCA2 single nucleotide variants. <em>bioRxiv [Preprint].</em> 2023 Dec. DOI: 10.1101/2023.12.14.571597.</p>
+        <a href="https://doi.org/10.1101/2023.12.14.571597" class="btn btn-primary" target="_blank">Preprint page</a>
       </div>
 
-      <div class="authors mt-4">
-        <p><b>6.</b> Zipinotti Dos Santos D, de Souza JC, Pimenta TM, Martins BS, Ribeiro Junior RS, Butzene SMS, Tessarollo NG, Lyra-Jr PC et al. The impact of lipid metabolism on breast cancer: a review about its role in tumorigenesis and immune escape. <em>Cell Commun Signal.</em> 2023 Jun. DOI: 10.1186/s12964-023-01178-1.</p>
-        <div class="jb mb-5">
-          <a href="https://doi.org/10.1186/s12964-023-01178-1" target="_blank" class="btn btn-outline-info">Journal's page</a>
-        </div>
-      </div>
+      <div class="authors">
+        <p><strong>6.</strong> Zipinotti Dos Santos D, de Souza JC, Pimenta TM, Martins BS, Ribeiro Junior RS, Butzene SMS, Tessarollo NG, Lyra-Jr PC, Calixto VR, de Lima VC, Silva MTD. The impact of lipid metabolism on breast cancer: a review about its role in tumorigenesis and immune escape. <em>Cell Commun Signal.</em> 2023 Jun. DOI: 10.1186/s12964-023-01178-1.</p>
+        <a href="https://doi.org/10.1186/s12964-023-01178-1" class="btn btn-primary" target="_blank">Journal's page</a>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>7.</b> Fasching PA, Liu D, Scully S, Ingle JN, Lyra-Jr PC, Rack B, Hein A, Ekici AB, Reis A, Schneeweiss A, Tesch H, Fehm TN, Heinrich G, Beckmann MW, Ruebner M, Hübner H, Lambrechts D, Madden E, Shen J, Room J, Doheny K, Jenkins GD, Carlson EE, Li L, Fridley BL et al. Identification of two genetic loci associated with leukopenia after chemotherapy in Breast Cancer Patients. <em>Clin Cancer Res.</em> 2022 Aug. DOI: 10.1158/1078-0432.CCR-20-4774.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.1158/1078-0432.CCR-20-4774" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>8.</b> Mendoza-Fandiño G, Lyra-Jr PC, Nepomuceno TC, Harro CM, Woods NT, Li X, Rangel LB, Carvalho MA, Couch FJ, Monteiro ANA. Two distinct mechanisms underlie estrogen-receptor-negative breast cancer susceptibility at the 2p23.2 locus. <em>Eur J Hum Genet.</em> 2021 Nov. DOI: 10.1038/s41431-021-01005-6.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.1038/s41431-021-01005-6" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>9.</b> Henriques TB, dos Santos Dz, Guimarães IS, Tessarollo NG, Lyra-Jr PC, Mesquita P, Pádua D, Amaral AL, Cavadas B, Pereira L, Silva IV, Almeida RMSG, Rangel LBA. Inhibition of CXCR2 plays a pivotal role in re-sensitizing ovarian cancer to cisplatin treatment. <em>Aging.</em> 2021 May. DOI: 10.18632/aging.203074.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.18632/aging.203074" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>10.</b> Lyra-Jr PC, Nepomuceno TC, de Souza MLM, Machado GF, Veloso MF, Henriques TB, dos Santos Dz, Ribeiro IG, Ribeiro-Jr RSR, Rangel LBA, Richardson ME, Iversen ES, Goldgar D, Couch FJ, Carvalho MA, Monteiro ANA. Integration of functional assay data results provides strong evidence for classification of hundreds of BRCA1 variants of uncertain significance. <em>Genet Med.</em> 2020 Oct. DOI: 10.1038/s41436-020-00991-0.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.1038/s41436-020-00991-0" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>\n
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>11.</b> Lyra-Jr PC, Rangel LBA, Monteiro ANA. Functional landscape of common variants associated with susceptibility to epithelial ovarian cancer. <em>Curr Epidemiol Rep.</em> 2020 Jan. DOI: 10.1007/s40471-020-00227-4.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.1007/s40471-020-00227-4" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>12.</b> Gusev A, Lawrenson K, Lin X, Lyra-Jr PC, Kar S, Vavra KC, Segato F, Fonseca MAS, Lee JM, Pejovic T, Liu G, Ovarian Cancer Association Consortium, Karlan BY, Freedman ML, Noushmehr H, Monteiro ANA, Pharoah PDP, Pasaniuc B, Gayther SA. A transcriptome-wide association study of high-grade serous epithelial ovarian cancer identifies new susceptibility genes and splice variants. <em>Nat Genet.</em> 2019 May. DOI: 10.1038/s41588-019-0395-x.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.1038/s41588-019-0395-x" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>13.</b> Buckley MA, Woods NT, Tyrer JP, Mendoza-Fandiño G, Lawrenson K, Hazelett DJ, Najafabadi HS, Gjyshi A, Carvalho RS, Lyra-Jr PC, Coetzee SG, Shen HC, Yang AW, Earp MA, Yoder SJ, Risch H, Chenevix-Trench G, Ramus SJ, Phelan CM, Coetzee GA, Noushmehr H, Hughes TR, Sellers TA, Goode EL, Pharoah PDP, Gayther SA, Monteiro ANA. Functional analysis and fine mapping of the 9p22.2 ovarian cancer susceptibility locus. <em>Cancer Res.</em> 2018 Feb;78(4):1132-1142. DOI: 10.1158/0008-5472.CAN-17-3864.</p>
         <div class="jb mb-5">
           <a href="https://doi.org/10.1158/0008-5472.CAN-17-3864" target="_blank" class="btn btn-outline-info">Journal's page</a>
         </div>
       </div>
 
-      <div class="authors mt-4">
+      <div class="authors">
         <p><b>14.</b> Phelan CM, Kuchenbaecker KB, Tyrer JP, Kar S, Lawrenson K, Winham SJ, Dennis J, Pirie A, Riggan M, Chornokur G, Earp MA, <b>Lyra-Jr PC</b>, Couch FJ, Berchuck A, Chenevix-Trench G, Goode EL, Sellers TA, Antoniou AC, Pharoah PDP. Identification of 12 new susceptibility loci for different histotypes of epithelial ovarian cancer. <em>Nat Genet.</em> 2017 May;49(5):680-691. DOI: 10.1038/ng.3826.</p>
         <div class="jb mb-5">
           <a href="https://www.nature.com/articles/ng.3826" target="_blank" class="btn btn-outline-info">Journal's page</a>
